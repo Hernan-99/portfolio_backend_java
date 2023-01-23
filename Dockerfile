@@ -1,5 +1,5 @@
-FROM amazoncorreto:11-alpine-jdk
+FROM openjdk:8-jdk-alpine
 MAINTAINER hernanSanchez
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} portfolioback-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java ", "-jar", "/hsPortfolio.jar "]
+ENTRYPOINT ["java ", "-jar", "/portfolioback-0.0.1-SNAPSHOT.jar"]
